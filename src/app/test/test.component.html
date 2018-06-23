@@ -1,0 +1,31 @@
+<h2 [class]="successClass">Welcome {{ name }}</h2>
+<h2>{{2+2}}</h2>
+<h2>{{"Welcome again " + name}}</h2>
+<h2>{{name.length}}</h2>
+<h2>{{name.toUpperCase()}}</h2>
+<h2>{{greetUser()}}</h2>
+<h2>The url is: {{siteUrl}}</h2>
+
+<input [(ngModel)]="myName" type="text">
+{{myName}}
+
+<button (click)="onClick($event)">Greet</button>
+<h2>{{greeting}}</h2>
+
+<input #myInput type="text">
+<button (click)="logMessage(myInput.value)">Log Message</button>
+
+<input [id]="myId" type="text" value="Brian">
+<input bind-id="myId" type="text" value="Brian">
+
+<h2 [class.text-danger] ="hasError">I exist!</h2>
+
+<h2 [ngClass]="messageClasses">Hey there!</h2>
+
+<h2 [style.color]="'orange'">Hello Hello Hello</h2>
+
+<h2 [style.color]="hasError ? 'red' : 'green'">Goodbye Goodbye Goodbye</h2>
+
+<h2 [style.color]="highlightColor">Blah blah blah</h2>
+
+<h2 [ngStyle]="titleStlyes">Blah2 blah2 blah2</h2>
